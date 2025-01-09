@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const baseApi = axios.create({
-  baseURL: "https://upset-ties-poke.loca.lt/api",
+  baseURL: "https://lovely-moose-tickle.loca.lt/api",
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
