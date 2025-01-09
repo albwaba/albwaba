@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+
 import NotificationList from "../components/notification/NotificationList";
 import { useAuth, useClerk } from "@clerk/clerk-react";
 import { baseApi } from "../api/posts";

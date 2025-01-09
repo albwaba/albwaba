@@ -4,7 +4,7 @@ import { FcOk } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { ar } from "date-fns/locale/ar";
 
-export default function ApproveItem({ item }) {
+export const ApproveItem = ({ item }) => {
   return (
     <div class="w-full p-3  bg-white rounded flex items-start gap-1">
       <div>
@@ -27,4 +27,4 @@ export default function ApproveItem({ item }) {
       </div>
     </div>
   );
-}
+};

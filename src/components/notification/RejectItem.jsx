@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { formatDistance } from "date-fns";
 import { ar } from "date-fns/locale/ar";
 
-export default function RejectItem({ item }) {
+export const RejectItem = ({ item }) => {
   console.log(item);
 
   return (
@@ -45,4 +45,4 @@ export default function RejectItem({ item }) {
       </div>
     </div>
   );
-}
+};

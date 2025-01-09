@@ -4,7 +4,7 @@ import { CgTime } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import { ar } from "date-fns/locale/ar";
 
-export default function PendingItem({ item }) {
+export const PendingItem = ({ item }) => {
   return (
     <div class="w-full p-3  bg-white rounded flex items-start gap-1">
       <div>
@@ -28,4 +28,4 @@ export default function PendingItem({ item }) {
       </div>
     </div>
   );
-}
+};
