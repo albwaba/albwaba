@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RejectModal from "./rejectModal";
+import { RejectModal } from "./RejectModal";
 
 export default function RejectButton({ post, fetchPendingPosts }) {
   const [modalOpen, setModalOpen] = useState(false);

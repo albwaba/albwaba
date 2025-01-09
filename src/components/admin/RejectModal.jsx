@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { useAdmin } from "../../contexts/Admin";
 import { FaXmark } from "react-icons/fa6";
 
-export default function RejectModal({ post, setModalOpen, fetchPendingPosts }) {
+export const RejectModal = ({ post, setModalOpen, fetchPendingPosts }) => {
   const { handeleRejectPost } = useAdmin();
   const [rejectReasons, setRejectReason] = useState({
     postId: post._id,
@@ -159,4 +159,4 @@ export default function RejectModal({ post, setModalOpen, fetchPendingPosts }) {
     </div>,
     document.querySelector("#app")
   );
-}
+};
