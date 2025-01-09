@@ -1,8 +1,8 @@
 import React from "react";
-import { RejectItem } from "./rejectItem";
-import { PendingItem } from "./pendingItem";
-import { ApproveItem } from "./ApproveItem";
-import { UpdateItem } from "./UpdateItem";
+import { RejectItem } from "./RejectItem.jsx";
+import { PendingItem } from "./PendingItem.jsx";
+import { ApproveItem } from "./ApproveItem.jsx";
+import { UpdateItem } from "./UpdateItem.jsx";
 
 export default function NotificationList({ items }) {
   return (
