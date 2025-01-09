@@ -1,12 +1,11 @@
 import axios from "axios";
 
 export const baseApi = axios.create({
-  baseURL: "https://lovely-moose-tickle.loca.lt/api",
+  baseURL: "https://giant-clowns-joke.loca.lt/api",
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
   },
-  withCredentials: true,
 });
 const userId = localStorage.getItem("user-id");
 
