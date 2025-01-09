@@ -6,7 +6,7 @@ import { RouterProvider } from "react-router-dom";
 import { authRouter } from "./routes/authRouter";
 import { appRouter } from "./routes/appRouter";
 
-import { ar } from "date-fns/locale";
+import { ar } from "@clerk/localizations/ar-SA";
 const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 function App() {
@@ -16,6 +16,8 @@ function App() {
         afterSignOutUrl="/"
         publishableKey={clerkPubKey}
         localization={ar}
+        signInFallbackRedirectUrl="https://albwaba.netlify.app/home"
+        signInForceRedirectUrl="https://albwaba.netlify.app/home"
       >
         <SignedOut>
           <RouterProvider router={authRouter} />
