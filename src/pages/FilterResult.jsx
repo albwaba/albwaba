@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Category from "../components/Category";
 import { usePosts } from "../contexts/PostsContext";
 import Loading from "../components/Loading";
 import PostList from "../components/PostList";
 import Pagination from "../components/Pagination";
 
-export default function FilterResult() {
+export default function FilterResult({ title }) {
   const {
     filterPosts,
     totalSearchPages,
@@ -15,6 +15,10 @@ export default function FilterResult() {
     sortSearchType,
     setSortSearchType,
   } = usePosts();
+
+  useEffect(() => {
+    document.title = title;
+  }, []);
   return (
     <>
       <Category />

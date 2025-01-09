@@ -6,13 +6,15 @@ import { postFormValidator } from "../helper/formValidator";
 import toast from "react-hot-toast";
 import { baseApi } from "../api/posts";
 
-export default function EditPost() {
+export default function EditPost({ title }) {
   const { data } = useLoaderData();
   console.log(data);
 
   const errors = useActionData();
   const postId = new URLSearchParams();
-
+  useEffect(() => {
+    document.title = title;
+  }, []);
   return <PostForm errors={errors} post={data} actionType="edit" />;
 }
 

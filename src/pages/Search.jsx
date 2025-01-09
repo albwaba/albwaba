@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import SelectMenu from "../components/SelectMenu";
 import { Form, useNavigate } from "react-router-dom";
 
-export default function Search() {
+export default function Search({ title }) {
   const [realEstate, setRealEstate] = useState("");
   const navigate = useNavigate();
   const handeleChange = (e) => {
@@ -18,6 +18,10 @@ export default function Search() {
       search: `?${new URLSearchParams(query).toString()}`,
     });
   };
+
+  useEffect(() => {
+    document.title = title;
+  }, []);
   return (
     <Form onSubmit={handeleSubmit}>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

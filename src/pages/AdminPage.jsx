@@ -4,7 +4,7 @@ import NotFound from "./NotFound";
 import PostsImgSlider from "../components/imgsSlider/PostsImgSlider";
 import RejectButton from "../components/admin/RejectButton";
 
-export default function AdminPage() {
+export default function AdminPage({ title }) {
   const { isAdmin, handeleGetPendingPosts, handeleApprovePost } = useAdmin();
   const [pendingPosts, setPendingPosts] = useState([]);
   const fetchPendingPosts = async () => {
@@ -19,6 +19,7 @@ export default function AdminPage() {
   useEffect(() => {
     if (!isAdmin) return;
     fetchPendingPosts();
+    document.title = title;
   }, []);
 
   if (!isAdmin) {

@@ -27,7 +27,6 @@ import SearchResult, { searchResultLoader } from "../pages/SearchResult";
 export const appRouter = createBrowserRouter([
   {
     path: "/",
-
     element: (
       <>
         <AdminProvider>
@@ -48,26 +47,26 @@ export const appRouter = createBrowserRouter([
       },
       {
         path: "/home",
-        element: <HomePage />,
+        element: <HomePage title="الرئيسة" />,
       },
 
       {
         path: "/saved",
-        element: <Save />,
+        element: <Save title="المفضلة" />,
         // loader: FavoritesPostsLoader,
       },
       {
         path: "/search",
-        element: <Search />,
+        element: <Search title="بحث متقدم" />,
       },
       {
         path: "/search_result",
-        element: <SearchResult />,
+        element: <SearchResult title="نتائج البحث" />,
         loader: searchResultLoader,
       },
       {
         path: "/filter",
-        element: <FilterResult />,
+        element: <FilterResult title="الرئيسة" />,
         // loader: FavoritesPostsLoader,
       },
       {
@@ -75,18 +74,18 @@ export const appRouter = createBrowserRouter([
         action,
         element: (
           <GeolocationProvider>
-            <NewPost />
+            <NewPost title="نشر إعلان" />
           </GeolocationProvider>
         ),
       },
       {
         path: "/notifications",
-        element: <Notification />,
+        element: <Notification title="الاشعارات" />,
         // loader: NotifcaLoader,
       },
       {
         path: "/admin",
-        element: <AdminPage />,
+        element: <AdminPage title="admin" />,
       },
       {
         path: "/post/edit/:postId",
@@ -94,7 +93,7 @@ export const appRouter = createBrowserRouter([
         loader: EditLoader,
         element: (
           <GeolocationProvider>
-            <EditPost />
+            <EditPost title="تعديل الاعلان" />
           </GeolocationProvider>
         ),
       },
@@ -112,13 +111,13 @@ export const appRouter = createBrowserRouter([
         path: "/my-posts",
         element: (
           <MyPostsProvider>
-            <MyPosts />
+            <MyPosts title="إعلاناتي" />
           </MyPostsProvider>
         ),
       },
       {
         path: "*",
-        element: <NotFound />,
+        element: <NotFound title="الصفحة غير موجودة" />,
       },
     ],
   },

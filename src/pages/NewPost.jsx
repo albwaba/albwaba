@@ -1,15 +1,17 @@
 import { postFormValidator } from "../helper/formValidator";
 import PostForm from "../components/form/PostForm";
 import { redirect, useActionData } from "react-router-dom";
-import axios from "axios";
+
 import toast from "react-hot-toast";
 import { baseApi } from "../api/posts";
+import { useEffect } from "react";
 
-export default function NewPost() {
-  // const { userId } = useAuth();
+export default function NewPost({ title }) {
   const errors = useActionData();
-  // console.log(errors);
 
+  useEffect(() => {
+    document.title = title;
+  }, []);
   return <PostForm errors={errors} actionType="new" />;
 }
 

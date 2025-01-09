@@ -4,7 +4,7 @@ import NotificationList from "../components/notification/NotificationList";
 import { useAuth, useClerk } from "@clerk/clerk-react";
 import { baseApi } from "../api/posts";
 
-export default function Notification() {
+export default function Notification({ title }) {
   const [notifications, setNotifications] = useState([]);
   const { user } = useClerk();
   const { getToken } = useAuth();
@@ -14,7 +14,9 @@ export default function Notification() {
       const data = await baseApi.get(`user/notifications/${user.id}`);
       setNotifications(data.data.notifications);
     };
+
     handeleGetNotifications();
+    document.title = title;
   }, []);
   return (
     <div class=" bg-background">

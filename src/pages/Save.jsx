@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import PostList from "../components/PostList";
 import { usSavedePosts } from "../contexts/FavoritesContext";
 
-function Save() {
+function Save({ title }) {
   const { savedPosts } = usSavedePosts();
-  console.log(savedPosts);
-
+  useEffect(() => {
+    document.title = title;
+  }, []);
   return <PostList posts={savedPosts} />;
 }
 

@@ -4,13 +4,14 @@ import PostList from "../components/PostList";
 import { useMyPosts } from "../contexts/MyPostsContext";
 import CardItems from "../components/post/CardItems";
 
-export default function MyPosts() {
+export default function MyPosts({ title }) {
   const { handeleGetMyPosts } = useMyPosts();
   useEffect(() => {
     const fetch = async () => {
       await handeleGetMyPosts();
     };
     fetch();
+    document.title = title;
   }, []);
   return <CardItems />;
   // const { data } = useLoaderData();

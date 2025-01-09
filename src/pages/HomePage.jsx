@@ -9,7 +9,7 @@ import { useAdmin } from "../contexts/Admin";
 import Category from "../components/Category";
 import Loading from "../components/Loading";
 
-export default function HomePage() {
+export default function HomePage({ title }) {
   const {
     posts,
     totalHomePages,
@@ -18,6 +18,11 @@ export default function HomePage() {
     setSortHomeType,
     sortHomeType,
   } = usePosts();
+
+  useEffect(() => {
+    document.title = title;
+  }, []);
+
   return (
     <>
       {isLoading ? (

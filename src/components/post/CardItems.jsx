@@ -15,6 +15,15 @@ export default function CardItems() {
           <p className=" text-text font-bold">{state.totalViews}</p>
         </Link>
         <Link
+          to={`/my-posts?state=${"approvedPosts"}`}
+          className={`${
+            activeState === "approvedPosts" ? "bg-accent" : "bg-secondary"
+          } rounded-lg flex flex-col-reverse items-center justify-between gap-5 p-4`}
+        >
+          <p className=" text-text">الإعلانات الفعالة</p>
+          <p className=" text-text font-bold">{state.approvedPosts?.length}</p>
+        </Link>
+        <Link
           to={`/my-posts?state=${"pendingPosts"}`}
           className={`${
             activeState === "pendingPosts" ? "bg-accent" : "bg-secondary"
@@ -29,7 +38,7 @@ export default function CardItems() {
             activeState === "rejectedPosts" ? "bg-accent" : "bg-secondary"
           } rounded-lg flex flex-col-reverse items-center justify-between gap-5 p-4`}
         >
-          <p className=" text-text">مرفوض</p>
+          <p className=" text-text">الإعلانات المرفوضة</p>
           <p className=" text-text font-bold">{state.rejectedPosts?.length}</p>
         </Link>
         <Link
@@ -49,15 +58,6 @@ export default function CardItems() {
         >
           <p className=" text-text">محذوف</p>
           <p className=" text-text font-bold">{state.deletedPosts?.length}</p>
-        </Link>
-        <Link
-          to={`/my-posts?state=${"approvedPosts"}`}
-          className={`${
-            activeState === "approvedPosts" ? "bg-accent" : "bg-secondary"
-          } rounded-lg flex flex-col-reverse items-center justify-between gap-5 p-4`}
-        >
-          <p className=" text-text">الإعلانات الفعالة</p>
-          <p className=" text-text font-bold">{state.approvedPosts?.length}</p>
         </Link>
       </div>
       <PostList posts={state[activeState]} />
