@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAdmin } from "../contexts/Admin";
 import NotFound from "./NotFound";
-import { Link } from "react-router-dom";
-import { Swiper } from "swiper/react";
-import { SwiperSlide } from "swiper/react";
 import PostsImgSlider from "../components/imgsSlider/PostsImgSlider";
-import RejectModal from "../components/admin/rejectModal";
 import RejectButton from "../components/admin/RejectButton";
 
 export default function AdminPage() {
