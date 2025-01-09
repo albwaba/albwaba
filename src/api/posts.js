@@ -6,6 +6,7 @@ export const baseApi = axios.create({
     "Content-Type": "application/json",
     Accept: "application/json",
   },
+  withCredentials: true,
 });
 const userId = localStorage.getItem("user-id");
 
