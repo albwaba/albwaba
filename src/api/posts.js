@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const baseApi = axios.create({
-  baseURL: "https://grww4oicr2.loclx.io/api",
+  baseURL: "https://xgraf7gtch.loclx.io/api",
 });
 const userId = localStorage.getItem("user-id");
 
