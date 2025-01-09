@@ -25,7 +25,7 @@ export default function Stats() {
         <div class="grid grid-cols-1 md:grid-cols-3  md:divide-x-2 divide-border">
           <div class=" pb-10  lg:pb-0  justify-items-center">
             <div className="w-20 h-20 mb-5">
-              <img src="image.png" alt="" />
+              <img src="image.png" alt="users icon" />
             </div>
             <div class=" font-bold text-5xl text-gray-900 mb-5 text-center text-text">
               {stats.totalPosts}
@@ -36,7 +36,7 @@ export default function Stats() {
           </div>
           <div class="  pb-10 -0 lg:pb-0  justify-items-center">
             <div className="w-20 h-20 mb-5">
-              <img src="world-wide-web_6471812.png" alt="" />
+              <img src="world-wide-web_6471812.png" alt="world wide web." />
             </div>
             <div class="font-manrope font-bold text-5xl text-gray-900 mb-5 text-center text-text">
               {stats.DailyVisitors}
@@ -47,7 +47,7 @@ export default function Stats() {
           </div>
           <div class="  pb-10 -0 lg:pb-0  justify-items-center">
             <div className="w-20 h-20 mb-5">
-              <img src="people_16575140.png" alt="" />
+              <img src="people_16575140.png" alt="post icon." />
             </div>
             <div class="font-manrope font-bold text-5xl text-gray-900 mb-5 text-center text-text">
               {stats.totalUsers}
