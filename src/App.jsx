@@ -6,7 +6,7 @@ import { RouterProvider } from "react-router-dom";
 import { authRouter } from "./routes/authRouter";
 import { appRouter } from "./routes/appRouter";
 
-import { ar } from "@clerk/localizations/ar-SA";
+import { ar } from "@clerk/localizations";
 const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 function App() {
