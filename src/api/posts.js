@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const baseApi = axios.create({
-  baseURL: "http://localhost:2000/api",
+  baseURL: "https://albwaba-server.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
