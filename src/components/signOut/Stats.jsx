@@ -68,7 +68,7 @@ export default function Stats() {
               ></CountUp>
             </div>
             <p class="text-xl text-gray-500 text-center block font-semibold">
-              مستخدم
+              {stats.totalUsers > 10 ? "مستخدم" : "مستخدمين"}
             </p>
           </div>
         </div>
