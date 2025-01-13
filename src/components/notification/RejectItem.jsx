@@ -8,13 +8,16 @@ export const RejectItem = ({ item }) => {
   console.log(item);
 
   return (
-    <div class="w-full p-3  bg-white rounded flex items-start gap-1">
+    <div class="w-full p-3  bg-background rounded flex items-start gap-1">
       <div>
         <CgDanger size={20} color="red" />
       </div>
       <div class="pl-3">
         {item.messages.length > 1 ? (
-          <p tabindex="0" class="text-sm  tracking-wide font leading-tight">
+          <p
+            tabindex="0"
+            class="text-sm text-text tracking-wide font leading-tight"
+          >
             نشكرك على اهتمامك بإدراج إعلانك{" "}
             <Link to="/my-posts?state=rejectedPosts" className="text-accent">
               {item.postName}

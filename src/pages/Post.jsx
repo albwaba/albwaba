@@ -8,6 +8,7 @@ import { useLoaderData, useNavigation } from "react-router-dom";
 import LogoSpinner from "../components/LogoSpinner";
 import NotFound from "./NotFound";
 import { baseApi } from "../api/posts";
+import Loading from "../components/Loading";
 
 export default function Post() {
   const { data, status } = useLoaderData();
@@ -26,7 +27,9 @@ export default function Post() {
     userId,
   } = data;
 
-  return (
+  return isLoading ? (
+    <Loading />
+  ) : (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 grid-rows-[repeat(auto-fill_,minmax(0,1fr))] divide-y-2 ">
       <div className="col-start-1 ">
         <ImgSlider images={images} />

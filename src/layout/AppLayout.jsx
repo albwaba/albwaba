@@ -5,6 +5,7 @@ import SpinnerFullPage from "../components/SpinnerFullPage";
 import LogoSpinner from "../components/LogoSpinner";
 import Category from "../components/Category";
 import { usePosts } from "../contexts/PostsContext";
+import Loading from "../components/Loading";
 
 export default function AppLayout() {
   const { state } = useNavigation();
@@ -14,7 +15,7 @@ export default function AppLayout() {
     <>
       <AppNav />
       <main className="p-4 container mx-auto  ">
-        {isLoading ? <LogoSpinner /> : <Outlet />}
+        {isLoading ? <Loading /> : <Outlet />}
       </main>
     </>
   );

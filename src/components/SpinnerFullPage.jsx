@@ -1,8 +1,10 @@
-function SpinnerFullPage() {
+function SpinnerFullPage({ actionType }) {
   return (
     <div className="fixed  bg-[#fbf7f4] dark:bg-[#181a1b]  !bg-opacity-60  z-[9999] inset-0 h-full w-full flex items-center justify-center">
       <div className="flex items-center">
-        <span className="text-3xl ml-4 text-text">جاري النشر</span>
+        <span className="text-3xl ml-4 text-text">
+          جاري {actionType === "new" ? "النشر" : "التحديث"}
+        </span>
 
         <svg
           className="animate-spin h-5 w-5 text-gray-600"

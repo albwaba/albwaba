@@ -1,21 +1,26 @@
 import React from "react";
 import PostForm from "../components/form/PostForm";
 import axios from "axios";
-import { redirect, useActionData, useLoaderData } from "react-router-dom";
+import {
+  redirect,
+  useActionData,
+  useLoaderData,
+  useNavigation,
+} from "react-router-dom";
 import { postFormValidator } from "../helper/formValidator";
 import toast from "react-hot-toast";
 import { baseApi } from "../api/posts";
+import Loading from "../components/Loading";
 
 export default function EditPost({ title }) {
   const { data } = useLoaderData();
-  console.log(data);
-
   const errors = useActionData();
-  const postId = new URLSearchParams();
+  const { state } = useNavigation();
+  const isLoading = state === "submitting" || "loading";
   useEffect(() => {
     document.title = title;
   }, []);
-  return <PostForm errors={errors} post={data} actionType="edit" />;
+  return isLoading ? <Loading /> : <PostForm errors={errors} />;
 }
 
 export async function loader({ request: { signal }, params: { postId } }) {

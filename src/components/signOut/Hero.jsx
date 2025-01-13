@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="relative bg-[url(../photo-1604014237800-1c9102c219da.webp)]  bg-no-repeat bg-center bg-cover flex items-center py-16 justify-end overflow-hidden h-[80vh]">
+    <section className="relative bg-[url(../photo-1604014237800-1c9102c219da.webp)]  bg-no-repeat bg-center bg-cover flex items-start py-16 justify-end overflow-hidden h-[80vh]">
       <div className="absolute  h-full right-0 bottom-0 bg-background skew-x-[25deg] translate-x-44 w-1/2 max-lg:hidden"></div>
       <div className="absolute inset-0 max-sm:bg-white/75 max-sm:dark:bg-gray-900/75 lg:bg-transparent sm:from-white/95 sm:to-white/25 max-lg:bg-gradient-to-l sm:dark:from-gray-900/95"></div>
       <div className="relative flex flex-col items-start w-full  max-w-md px-4 lg:w-96 ">

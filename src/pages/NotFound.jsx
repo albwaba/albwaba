@@ -3,9 +3,24 @@ import { Link } from "react-router-dom";
 
 export default function NotFound() {
   return (
-    <>
-      <h1>page not found</h1>
-      <Link to="/">back to home</Link>
-    </>
+    <section className="flex items-center h-full p-16 dark:bg-gray-50 dark:text-gray-800">
+      <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+        <div className="max-w-md text-center">
+          <h2 className="mb-8 font-extrabold text-9xl dark:text-gray-400">
+            <span className="sr-only">Error</span>404
+          </h2>
+          <p className="text-2xl font-semibold md:text-3xl">
+            عذرا، لم نتمكن من العثور على هذه الصفحة.
+          </p>
+          <p className="mt-4 mb-8 dark:text-gray-600">
+            آسف لذلك! يرجى زيارة الصفحة الرئيسة لدينا للوصول إلى المكان الذي
+            تريد الذهاب إليه.{" "}
+          </p>
+          <Link className="px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50">
+            الرجوع للصفحة الرئيسة
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }

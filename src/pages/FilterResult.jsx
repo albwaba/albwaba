@@ -4,6 +4,7 @@ import { usePosts } from "../contexts/PostsContext";
 import Loading from "../components/Loading";
 import PostList from "../components/PostList";
 import Pagination from "../components/Pagination";
+import SearchIcon from "../components/SearchIcon";
 
 export default function FilterResult({ title }) {
   const {
@@ -23,7 +24,7 @@ export default function FilterResult({ title }) {
     <>
       <Category />
       {isLoading ? (
-        <Loading />
+        <SearchIcon />
       ) : (
         <>
           <div className="flex items-center justify-between mb-3">

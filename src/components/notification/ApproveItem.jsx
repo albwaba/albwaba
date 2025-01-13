@@ -6,12 +6,15 @@ import { ar } from "date-fns/locale/ar";
 
 export const ApproveItem = ({ item }) => {
   return (
-    <div class="w-full p-3  bg-white rounded flex items-start gap-1">
+    <div class="w-full p-3  bg-background rounded flex items-start gap-1">
       <div>
         <FcOk size={20} />
       </div>
       <div class="pl-3">
-        <p tabindex="0" class="text-sm  tracking-wide font leading-tight">
+        <p
+          tabindex="0"
+          class="text-sm text-text tracking-wide font leading-tight"
+        >
           تم قبول إعلانك{" "}
           <Link to={`/post/${item.postId}`} className="text-accent">
             {item.postName}

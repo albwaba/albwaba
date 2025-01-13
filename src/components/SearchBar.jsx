@@ -6,14 +6,15 @@ export default function SearchBar() {
   const qRef = useRef();
   const { handeleGetFilterPosts, setQuerySearch } = usePosts();
   const navigate = useNavigate();
-  const handeleSearch = async () => {
+  const handeleSearch = async (e) => {
+    e.preventDefault();
     if (qRef.current.value === "") return;
     const data = await handeleGetFilterPosts(qRef.current.value);
     navigate("/filter");
   };
   return (
     <Form
-      onSubmit={handeleSearch}
+      onSubmit={(e) => handeleSearch(e)}
       method="GET"
       className="w-full space-y-1 dark:text-gray-800"
     >

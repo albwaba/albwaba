@@ -23,6 +23,8 @@ import Notification from "../pages/Notification";
 import FilterResult from "../pages/FilterResult";
 
 import SearchResult, { searchResultLoader } from "../pages/SearchResult";
+import { Suspense } from "react";
+import Loading from "../components/Loading";
 
 export const appRouter = createBrowserRouter([
   {

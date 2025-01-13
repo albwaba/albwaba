@@ -1,7 +1,7 @@
 import { useClerk, UserButton } from "@clerk/clerk-react";
-import { Form, Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import MobileNav from "./MobileNav";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { MdNotifications } from "react-icons/md";
 import { animated, useSpring } from "@react-spring/web";
 import { CgMenuLeftAlt } from "react-icons/cg";
@@ -10,14 +10,23 @@ import { useAdmin } from "../contexts/Admin";
 
 import SearchBar from "./SearchBar";
 import { usePosts } from "../contexts/PostsContext";
+import { FaMoon, FaSun } from "react-icons/fa";
 export default function AppNav() {
   const [openNav, setOpenNav] = useState(false);
   const { isAdmin } = useAdmin();
   const { user } = useClerk();
   const { notSeenNotifications } = usePosts();
-
+  const [theme, setTheme] = useState("light");
   const props = useSpring({ x: openNav ? "0" : "-20rem" });
   const onclick = () => setOpenNav(false);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
   return (
     <>
       <nav className="bg-primary sticky  top-0 z-[2222]">
@@ -64,6 +73,19 @@ export default function AppNav() {
                   <></>
                 )}
               </NavLink>
+              {theme === "light" ? (
+                <FaSun
+                  size={23}
+                  className=" text-text"
+                  onClick={() => setTheme("dark")}
+                />
+              ) : (
+                <FaMoon
+                  size={23}
+                  className=" text-text"
+                  onClick={() => setTheme("light")}
+                />
+              )}
               <UserButton />
             </div>
           </div>

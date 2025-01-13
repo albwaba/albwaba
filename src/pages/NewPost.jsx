@@ -1,18 +1,25 @@
 import { postFormValidator } from "../helper/formValidator";
 import PostForm from "../components/form/PostForm";
-import { redirect, useActionData } from "react-router-dom";
+import { redirect, useActionData, useNavigation } from "react-router-dom";
 
 import toast from "react-hot-toast";
 import { baseApi } from "../api/posts";
 import { useEffect } from "react";
+import Loading from "../components/Loading";
+import SpinnerFullPage from "../components/SpinnerFullPage";
 
 export default function NewPost({ title }) {
   const errors = useActionData();
-
+  const { state } = useNavigation();
+  const isLoading = state === "submitting";
   useEffect(() => {
     document.title = title;
   }, []);
-  return <PostForm errors={errors} actionType="new" />;
+  return isLoading ? (
+    <SpinnerFullPage actionType="new" />
+  ) : (
+    <PostForm errors={errors} actionType="new" />
+  );
 }
 
 export async function action({ request }) {

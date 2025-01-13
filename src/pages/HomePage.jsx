@@ -31,15 +31,20 @@ export default function HomePage({ title }) {
         <>
           <Category />
           <div className="flex items-center justify-between mb-3">
-            <h1>كل الاعلانات : ({totalHomePosts})</h1>
+            <h1 className="text-text">كل الاعلانات : ({totalHomePosts})</h1>
             <div>
-              <span>فرز حسب :</span>
+              <span className="text-text">فرز حسب </span>
               <select
+                className="bg-background border border-solid border-border rounded-sm text-text"
                 defaultValue={sortHomeType}
                 onChange={(e) => setSortHomeType(e.target.value)}
               >
-                <option value="">من الاحدث الى الاقدم</option>
-                <option value="asc">من الاقدم الى الاحدث</option>
+                <option className="text-text" value="">
+                  من الاحدث الى الاقدم
+                </option>
+                <option className="text-text" value="asc">
+                  من الاقدم الى الاحدث
+                </option>
               </select>
             </div>
           </div>
