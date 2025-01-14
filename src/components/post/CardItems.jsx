@@ -47,7 +47,7 @@ export default function CardItems() {
             activeState === "soldPosts" ? "bg-accent" : "bg-secondary"
           } rounded-lg flex flex-col-reverse items-center justify-between gap-5 p-4`}
         >
-          <p className=" text-text">الإعلانات المباعه</p>
+          <p className=" text-text">الإعلانات المباعه / المؤجرة</p>
           <p className=" text-text font-bold">{state.soldPosts?.length}</p>
         </Link>
         <Link

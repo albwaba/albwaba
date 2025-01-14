@@ -47,7 +47,9 @@ export default function Modal({
                   </h3>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      {isApproved
+                      {isApproved && post.realEstate.realEstateFor === "rent"
+                        ? "هل تم تأجير الإعلان"
+                        : isApproved && post.realEstate.realEstateFor === "sale"
                         ? "هل تم بيع الإعلان"
                         : "سيتم حذف الإعلان نهائيا دون الرجوع إليه"}
                     </p>

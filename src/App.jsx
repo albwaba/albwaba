@@ -14,6 +14,7 @@ import { appRouter } from "./routes/appRouter";
 
 import { arSA } from "@clerk/localizations";
 import Loading from "./components/Loading";
+import { Toaster } from "react-hot-toast";
 const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 function App() {
@@ -31,9 +32,11 @@ function App() {
         </ClerkLoading>
         <ClerkLoaded>
           <SignedOut>
+            <Toaster />
             <RouterProvider router={authRouter} />
           </SignedOut>
           <SignedIn>
+            <Toaster />
             <RouterProvider router={appRouter} />
           </SignedIn>
         </ClerkLoaded>
