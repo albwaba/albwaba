@@ -1,5 +1,4 @@
 import { useAuth } from "@clerk/clerk-react";
-import axios from "axios";
 import {
   createContext,
   useContext,

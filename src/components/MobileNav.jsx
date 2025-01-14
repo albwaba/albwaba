@@ -1,9 +1,7 @@
 import { SignOutButton } from "@clerk/clerk-react";
-import React, { useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useAdmin } from "../contexts/Admin";
 export default function MobileNav({ onclick }) {
-  const navigate = useNavigate();
   const { isAdmin } = useAdmin();
 
   return (

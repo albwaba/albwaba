@@ -1,11 +1,7 @@
-import axios from "axios";
-
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import PostList from "../components/PostList";
 import { FaRegShareFromSquare } from "react-icons/fa6";
-import { useClerk } from "@clerk/clerk-react";
-import { da } from "date-fns/locale";
 import ShareList from "../components/ShareList";
 import { baseApi } from "../api/posts";
 export default function Profile() {
@@ -19,7 +15,7 @@ export default function Profile() {
           <img
             className="rounded-full w-20"
             src="https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ya3NqOE5udWp6aVlKUjVEbjMzMTJGV3Y2cmMiLCJyaWQiOiJ1c2VyXzJteVpKNTRNUk5jVXpFdDdUOWdzSThqY2k5ViJ9"
-            alt=""
+            alt="User profile picture"
           />
           <div className="flex flex-col gap-1">
             <h1>

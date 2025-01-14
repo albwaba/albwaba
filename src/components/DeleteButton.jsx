@@ -1,20 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Modal from "./Modal";
-
-// import Modal from "./Modal";
-// import Modal from "react-modal";
-
-// const customStyles = {
-//   content: {
-//     top: "50%",
-//     left: "50%",
-//     right: "auto",
-//     bottom: "auto",
-//     marginRight: "-50%",
-//     transform: "translate(-50%, -50%)",
-//   },
-// };
 export default function DeleteButton({
   isApproved,
   post,
@@ -52,17 +38,3 @@ export default function DeleteButton({
     </>
   );
 }
-
-// const userSchema = new mongoose.Schema({
-//   username: String,
-//   password: String,
-//   role: { type: String, enum: ['user', 'admin'], default: 'user' },
-//   notifications: [{
-//     message: String,
-//     read: { type: Boolean, default: false },
-//     createdAt: { type: Date, default: Date.now }
-//   }]
-//   // الحقول الأخرى
-// });
-
-// const User = mongoose.model('User', userSchema);

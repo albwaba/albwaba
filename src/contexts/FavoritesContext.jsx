@@ -1,13 +1,6 @@
-import axios from "axios";
 import { useAuth } from "@clerk/clerk-react";
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-  useState,
-} from "react";
-import toast, { Toaster } from "react-hot-toast";
+import { createContext, useContext, useEffect, useReducer } from "react";
+import toast from "react-hot-toast";
 import {
   addToFavorites,
   deleteFromFavorites,

@@ -69,7 +69,7 @@ export default function ImgUploader() {
                 key={index}
                 className=" object-cover h-full"
                 src={img.base64}
-                alt=""
+                alt="realEstate"
               />
               <RiCloseCircleFill
                 onClick={() => handleDeleteSelectedImg(img.id)}

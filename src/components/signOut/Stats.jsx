@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import CountUp from "react-countup";
-import axios from "axios";
+
 import { baseApi } from "../../api/posts";
 export default function Stats() {
   const [stats, setStats] = useState({

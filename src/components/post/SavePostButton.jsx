@@ -1,4 +1,3 @@
-import React, { memo, useCallback, useEffect } from "react";
 import { BsBookmarkHeart, BsBookmarkHeartFill } from "react-icons/bs";
 import { usSavedePosts } from "../../contexts/FavoritesContext";
 

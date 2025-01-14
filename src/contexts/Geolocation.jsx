@@ -1,5 +1,5 @@
 import axios from "axios";
-import { createContext, useContext, useReducer, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const GeolocationContext = createContext();
 

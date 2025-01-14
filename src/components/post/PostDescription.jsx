@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function PostDescription({ description }) {
   return (
     <div className=" col-span-1 pt-3 text-text md:row-start-2 md:col-start-2">

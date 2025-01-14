@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MdLocalPhone } from "react-icons/md";
 import { FaHeart, FaRegShareFromSquare } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
@@ -60,7 +60,7 @@ export default function PostOwnerInfo({ post }) {
               <img
                 className="h-12 w-full rounded-full"
                 src="https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ya3NqOE5udWp6aVlKUjVEbjMzMTJGV3Y2cmMiLCJyaWQiOiJ1c2VyXzJsNENmVTRhUXBMZ21Dd2c0dTdham9DZ0syMSIsImluaXRpYWxzIjoiQUYifQ?width=80"
-                alt=""
+                alt="User profile picture"
               />
             </div>
             <div>

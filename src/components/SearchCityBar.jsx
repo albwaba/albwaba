@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useGeoLocation } from "../contexts/Geolocation";
-import { json } from "react-router-dom";
 
 export default function SearchCityBar() {
   const [searchTerm, setSearchTerm] = useState("");

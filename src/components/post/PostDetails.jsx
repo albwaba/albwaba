@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function PostDetails({ realEstate }) {
   const { numOfBathrooms, facade, numOfRooms, area, furnished } = realEstate;
   return (

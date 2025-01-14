@@ -1,12 +1,7 @@
-import React, { memo } from "react";
-import { Link, useFetcher, useLocation, useNavigation } from "react-router-dom";
+import { Link, useLocation, useNavigation } from "react-router-dom";
 import SavePostButton from "./post/SavePostButton";
-
-import SpinnerFullPage from "./SpinnerFullPage";
-import { useMyPosts } from "../contexts/MyPostsContext";
-import { addDays, formatDistance, getDate, getDay } from "date-fns";
+import { addDays, formatDistance } from "date-fns";
 import { ar } from "date-fns/locale";
-import DeleteButton from "./DeleteButton";
 import PostStatus from "./post/PostStatus";
 function PostItem({ post }) {
   const createdAt = new Date(post.createdAt);
@@ -46,7 +41,7 @@ function PostItem({ post }) {
           <img
             className="object-cover h-full w-full rounded"
             src={post.images[0]?.url}
-            alt=""
+            alt={post.postName}
           />
         </div>
         <div className="mx-2 flex-1 h-full flex flex-col justify-between">

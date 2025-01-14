@@ -1,8 +1,7 @@
-import React, { useState } from "react";
 import { SwiperSlide, useSwiper } from "swiper/react";
 import { Thumbs, Navigation, Pagination } from "swiper/modules";
 import { Swiper } from "swiper/react";
-import { RiCheckboxBlankCircleLine } from "react-icons/ri";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -34,7 +33,7 @@ export default function PostsImgSlider({ imagesUrl }) {
             <img
               className="object-cover h-full w-full rounded"
               src={img.url}
-              alt=""
+              alt="real Estate"
             />
           </SwiperSlide>
         ))}

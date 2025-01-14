@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useMyPosts } from "../../contexts/MyPostsContext";
 import { Link, useSearchParams } from "react-router-dom";
 import PostList from "../PostList";

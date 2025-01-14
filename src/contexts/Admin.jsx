@@ -1,5 +1,4 @@
 import { useAuth, useClerk } from "@clerk/clerk-react";
-import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
 import { baseApi } from "../api/posts";
 

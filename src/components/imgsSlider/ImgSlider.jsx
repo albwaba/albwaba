@@ -34,7 +34,7 @@ export default function ImgSlider({ images }) {
                 <img
                   className="top-0 left-0 absolute w-full h-full object-cover"
                   src={img.url}
-                  alt=""
+                  alt="real Estate"
                 />
               </div>
             </SwiperSlide>
@@ -62,7 +62,7 @@ export default function ImgSlider({ images }) {
                 <img
                   className="top-0 left-0 absolute w-full h-full object-fill rounded-md"
                   src={img.url}
-                  alt=""
+                  alt="real Estate"
                 />
               </div>
             </SwiperSlide>

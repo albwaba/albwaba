@@ -1,4 +1,3 @@
-import React from "react";
 import DeleteButton from "../DeleteButton";
 import { useMyPosts } from "../../contexts/MyPostsContext";
 import ApproveButton from "./ApproveButton";

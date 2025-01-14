@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-import { Form, useActionData, useNavigation } from "react-router-dom";
+import { Form, useNavigation } from "react-router-dom";
 import FormGroup from "../FormGroup";
 import ImgUploader from "../ImgUploader";
 import Map from "../Map";
 import SearchCityBar from "../SearchCityBar";
-import SpinnerFullPage from "../SpinnerFullPage";
+
 export default function PostForm({ errors, post, actionType }) {
   const { state } = useNavigation();
   const isSubmitting = state === "submitting";

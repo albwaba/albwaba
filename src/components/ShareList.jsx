@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { FaCopy, FaXmark } from "react-icons/fa6";
-import toast, { Toaster } from "react-hot-toast";
+import { FaXmark } from "react-icons/fa6";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 export default function ShareList({ openDailog, setOpenDailog, type }) {
   if (!openDailog) return <></>;

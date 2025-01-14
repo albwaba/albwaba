@@ -1,13 +1,6 @@
 import { useAuth, useClerk } from "@clerk/clerk-react";
-import axios from "axios";
-
 import { createContext, useContext, useEffect, useState } from "react";
-import {
-  useLocation,
-  useNavigate,
-  useNavigation,
-  useSearchParams,
-} from "react-router-dom";
+import { useNavigate, useNavigation } from "react-router-dom";
 import { getPosts, getFilterPosts } from "../api/posts";
 import { getNotSeenNotifications } from "../api/user";
 
@@ -17,7 +10,6 @@ export default function PostsProvider({ children }) {
   const { state } = useNavigation();
   const { getToken } = useAuth();
   const { user } = useClerk();
-  console.log(user);
 
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
