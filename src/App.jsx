@@ -24,8 +24,8 @@ function App() {
         afterSignOutUrl="/"
         publishableKey={clerkPubKey}
         localization={arSA}
-        signUpForceRedirectUrl="https://albwaba.netlify.app/home"
-        signInForceRedirectUrl="https://albwaba.netlify.app/home"
+        signUpForceRedirectUrl="/https://albwaba.netlify.app/home"
+        signInForceRedirectUrl="/https://albwaba.netlify.app/home"
       >
         <ClerkLoading>
           <Loading />
